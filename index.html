@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css styles -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Lenovo</title>
+  </head>
+  <body>
+    <header class="container">
+      <div class="navbar-principal">
+        <div class="navbar-cnt navbar-user">
+          <figure>
+            <img src="./assets/logo.svg" alt="logo" />
+          </figure>
+          <nav class="navbar">
+            <ul class="navbar-user_list">
+              <li>
+                <a href="#"
+                  ><img class="navbar_user-icon" src="./assets/icons/compare.svg" alt="icon"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    class="navbar_user-icon"
+                    src="./assets//icons/icon-wishlist-empty.svg"
+                    alt="icon"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    class="navbar_user-icon"
+                    src="./assets/icons/icon-store-locator.svg"
+                    alt="icon"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    class="navbar_user-icon"
+                    src="./assets/icons/icon-contact-info.svg"
+                    alt="icon"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img class="navbar_user-icon" src="./assets/icons/lenovo rewards.svg" alt="icon"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    class="navbar_user-icon"
+                    src="./assets/icons/icon-user-profile.svg"
+                    alt="icon"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img class="navbar_user-icon" src="./assets/icons/icon-cart.svg" alt="icon"
+                /></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="navbar-cnt navbar-products">
+          <nav>
+            <ul class="navbar_products-list">
+              <li><a href="#" class="navbar_products-anchor">PCS & TABLETS</a></li>
+              <li><a href="#" class="navbar_products-anchor">PHONES & SMART DEVICES</a></li>
+              <li><a href="#" class="navbar_products-anchor">DATA CENTER</a></li>
+              <li><a href="#" class="navbar_products-anchor">SERVICES & SOLUTIONS</a></li>
+              <li><a href="#" class="navbar_products-anchor">SUPPORT</a></li>
+            </ul>
+          </nav>
+          <div class="search">
+            <input type="text" placeholder="What are you looking for today?" />
+            <span><img src="./assets/icons/Search.svg" alt="search icon" /></span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="navbar-secondary">
+        <ul class="nav-categories">
+          <li><a href="#">Laptops</a></li>
+          <li><a href="#">Desktops</a></li>
+          <li><a href="#">Workstations</a></li>
+          <li><a href="#">Tablets</a></li>
+          <li><a href="#">Accessories & Software</a></li>
+          <li><a href="#">Monitors</a></li>
+          <li><a href="#">Smart Home</a></li>
+          <li><a href="#">Home & Office Furniture</a></li>
+          <li><a href="#">Gaming</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Students</a></li>
+          <li><a class="sale" href="#">Sale</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside class="container aside">
+      <p class="aside-ad">
+        SAVE UP TO 21% ON <span>SELECT THINKPAD LAPTOPS</span> THROUGH NOVEMBER 11TH
+        <a href="#">Shop Now ></a>
+      </p>
+    </aside>
+
+    <main class="container">
+      <nav class="navbar-main">
+        <ul class="nav-models">
+          <li><a href="#">Models</a></li>
+          <li><a href="#">Tech Specs</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Compatible Accessories</a></li>
+          <li><a href="#">Services & Support</a></li>
+        </ul>
+      </nav>
+      <section class="models-cnt">
+        <h3>Models</h3>
+
+        <div class="models-cards">
+          <div class="filters">
+            <div class="filters-title">
+              <h4>Price</h4>
+              <img class="arrowUp" src="./assets/icons/icon-arrow-up.svg" alt="icon arrow up" />
+            </div>
+            <ul class="filters-price">
+              <li>
+                <input type="checkbox" />
+                $800-$999.99 (2)
+              </li>
+              <li>
+                <input type="checkbox" />
+                $1,000-$1,499.99 (4)
+              </li>
+              <li>
+                <input type="checkbox" />
+                $1,500-$1,999.99 (3)
+              </li>
+            </ul>
+            <p class="filters-more">See More</p>
+          </div>
+
+          <div class="cards-cnt">
+            <div class="order">
+              <p class="results">8 Matching results</p>
+              <select name="order" id="order">
+                <option value="lowToHigh">Price Low to High</option>
+                <option value="highToLow">Price High to Low</option>
+              </select>
+            </div>
+
+            <div class="cards">
+              <article>
+                <div class="doorbuster">
+                  <p>DOORBUSTER</p>
+                </div>
+                <picture>
+                  <img
+                    src="./assets/images/x1carb-8th.png"
+                    alt="lenovo thinkpad x1 extrene 2nd gen hero"
+                  />
+                </picture>
+                <h6>ThinkPad X1 Carbon Gen 8</h6>
+                <div class="price-cnt">
+                  <p class="price">$1,299.99</p>
+                  <p class="coupon">Use eCoupon: <span>YOGAPRESALE8</span></p>
+                </div>
+                <button>Add to Cart</button>
+              </article>
+
+              <article>
+                <div class="doorbuster hidden">
+                  <p>DOORBUSTER</p>
+                </div>
+                <picture>
+                  <img
+                    src="./assets/images/lenovo-laptop-thinkpad-x1-extreme-2nd-gen-hero.png"
+                    alt="lenovo thinkpad x1 extrene 2nd gen hero"
+                  />
+                </picture>
+                <h6>ThinkPad X1 Carbon Gen 8</h6>
+                <div class="price-cnt">
+                  <p class="price">$1,299.99</p>
+                  <p class="coupon">Use eCoupon: <span>YOGAPRESALE8</span></p>
+                </div>
+                <button>Add to Cart</button>
+              </article>
+
+              <article>
+                <div class="doorbuster hidden">
+                  <p>DOORBUSTER</p>
+                </div>
+                <picture>
+                  <img
+                    src="./assets/images/lenovo-laptop-thinkpad-x1-extreme-2nd-gen-hero.png"
+                    alt="lenovo thinkpad x1 extrene 2nd gen hero"
+                  />
+                </picture>
+                <h6>ThinkPad X1 Carbon Gen 8</h6>
+                <div class="price-cnt">
+                  <p class="price">$1,299.99</p>
+                  <p class="coupon">Use eCoupon: <span>YOGAPRESALE8</span></p>
+                </div>
+                <button>Add to Cart</button>
+              </article>
+
+              <article>
+                <div class="doorbuster">
+                  <p>DOORBUSTER</p>
+                </div>
+                <picture>
+                  <img
+                    src="./assets/images/x1carb-8th.png"
+                    alt="lenovo thinkpad x1 extrene 2nd gen hero"
+                  />
+                </picture>
+                <h6>ThinkPad X1 Carbon Gen 8</h6>
+                <div class="price-cnt">
+                  <p class="price">$1,299.99</p>
+                  <p class="coupon">Use eCoupon: <span>YOGAPRESALE8</span></p>
+                </div>
+                <button>Add to Cart</button>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="banner-cnt">
+        <p>
+          OPTIONAL MERCHANDISING BANNER THAT GOES BELOW MODELS SECTION. FOLLOW BANNER RULES. CAN
+          HAVE OPTIONAL IMAGE+LOGO+CTA
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
