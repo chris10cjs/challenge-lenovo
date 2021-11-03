@@ -16,13 +16,13 @@
     <title>Lenovo</title>
   </head>
   <body>
-    <header class="container">
+    <header class="header">
       <div class="navbar-principal">
         <div class="navbar-cnt navbar-user">
           <figure>
             <img src="./assets/logo.svg" alt="logo" />
           </figure>
-          <nav class="navbar">
+          <nav class="hide-user" id="navUser">
             <ul class="navbar-user_list">
               <li>
                 <a href="#"
@@ -73,11 +73,21 @@
               </li>
             </ul>
           </nav>
+          <figure class="user-menu" onclick="handleOnActiveUser()">
+            <img src="./assets/user.svg" alt="user menu" />
+          </figure>
         </div>
         <div class="navbar-cnt navbar-products">
+          <figure class="menu" onclick="handleClickMenu()">
+            <img src="./assets/menu.svg" alt="menu" />
+          </figure>
           <nav>
             <ul class="navbar_products-list">
-              <li><a href="#" class="navbar_products-anchor">PCS & TABLETS</a></li>
+              <li>
+                <a href="#" class="navbar_products-anchor" onclick="handleOnClick()"
+                  >PCS & TABLETS</a
+                >
+              </li>
               <li><a href="#" class="navbar_products-anchor">PHONES & SMART DEVICES</a></li>
               <li><a href="#" class="navbar_products-anchor">DATA CENTER</a></li>
               <li><a href="#" class="navbar_products-anchor">SERVICES & SOLUTIONS</a></li>
@@ -91,7 +101,7 @@
         </div>
       </div>
 
-      <nav class="navbar-secondary">
+      <nav class="hide" id="navSubProducts">
         <ul class="nav-categories">
           <li><a href="#">Laptops</a></li>
           <li><a href="#">Desktops</a></li>
@@ -109,24 +119,28 @@
       </nav>
     </header>
 
-    <aside class="container aside">
+    <aside class="aside">
       <p class="aside-ad">
         SAVE UP TO 21% ON <span>SELECT THINKPAD LAPTOPS</span> THROUGH NOVEMBER 11TH
         <a href="#">Shop Now ></a>
       </p>
     </aside>
 
-    <main class="container">
-      <nav class="navbar-main">
-        <ul class="nav-models">
-          <li><a href="#">Models</a></li>
-          <li><a href="#">Tech Specs</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Reviews</a></li>
-          <li><a href="#">Compatible Accessories</a></li>
-          <li><a href="#">Services & Support</a></li>
-        </ul>
-      </nav>
+    <main class="main">
+      <section class="navMain-cnt">
+        <nav class="navbar-main">
+          <ul class="nav-models">
+            <li><a href="#">Models</a></li>
+            <li><a href="#">Tech Specs</a></li>
+            <li><a href="#">Features</a></li>
+          </ul>
+          <ul class="nav-models">
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Compatible Accessories</a></li>
+            <li><a href="#">Services & Support</a></li>
+          </ul>
+        </nav>
+      </section>
       <section class="models-cnt">
         <h3>Models</h3>
 
@@ -134,23 +148,31 @@
           <div class="filters">
             <div class="filters-title">
               <h4>Price</h4>
-              <img class="arrowUp" src="./assets/icons/icon-arrow-up.svg" alt="icon arrow up" />
+              <img
+                id="arrow"
+                class="arrowUp"
+                onclick="handleOnClickFilters()"
+                src="./assets/icons/icon-arrow-up.svg"
+                alt="icon arrow up"
+              />
             </div>
-            <ul class="filters-price">
-              <li>
-                <input type="checkbox" />
-                $800-$999.99 (2)
-              </li>
-              <li>
-                <input type="checkbox" />
-                $1,000-$1,499.99 (4)
-              </li>
-              <li>
-                <input type="checkbox" />
-                $1,500-$1,999.99 (3)
-              </li>
-            </ul>
-            <p class="filters-more">See More</p>
+            <div class="hide-filters" id="filters">
+              <ul class="filters-price">
+                <li>
+                  <input type="checkbox" />
+                  $800-$999.99 (2)
+                </li>
+                <li>
+                  <input type="checkbox" />
+                  $1,000-$1,499.99 (4)
+                </li>
+                <li>
+                  <input type="checkbox" />
+                  $1,500-$1,999.99 (3)
+                </li>
+              </ul>
+              <p class="filters-more">See More</p>
+            </div>
           </div>
 
           <div class="cards-cnt">
@@ -245,5 +267,6 @@
         </p>
       </section>
     </main>
+    <script src="scripts/index.js" />
   </body>
 </html>

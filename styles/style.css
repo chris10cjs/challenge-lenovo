@@ -25,8 +25,9 @@ a {
 }
 
 /* -- Header -- */
-header {
-  height: 125px;
+.header {
+  width: 100vw;
+  /* height: 125px; */
 }
 
 .navbar-cnt {
@@ -55,10 +56,20 @@ header {
   margin: 8px;
 }
 
+.user-menu {
+  display: none;
+}
+
 /* Navbar products */
+.menu {
+  display: none;
+}
+
 .navbar-products {
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
+  padding: 0 16px;
 }
 
 .navbar_products-list {
@@ -66,7 +77,7 @@ header {
 }
 
 .navbar_products-anchor {
-  margin: 8px;
+  margin-right: 16px;
   text-align: left;
   font: bold 14px/17px Lato;
   letter-spacing: -0.14px;
@@ -98,7 +109,7 @@ header {
   justify-content: center;
   align-items: center;
   width: 40px;
-  height: 35px;
+  height: 100%;
   background-color: var(--black);
   position: absolute;
   top: 0;
@@ -107,7 +118,15 @@ header {
 }
 
 /* Navbar Categories */
-.navbar-secondary {
+.hide {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  background-color: var(--grey-50);
+}
+
+.show {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,9 +163,10 @@ header {
 
 /* -- Aside Ads -- */
 .aside {
+  width: 100vw;
   background-color: var(--bg-red-1);
   color: var(--white);
-  padding: 16px 0;
+  padding: 16px;
   text-align: center;
   font-size: 16px;
   letter-spacing: -0.13px;
@@ -169,20 +189,32 @@ header {
 
 /* -- Main -- */
 /* Navbar Models */
-.navbar-main {
+.main {
+  width: 100vw;
+  /* display: none; */
+}
+
+.navMain-cnt {
   border: 1px solid black;
+}
+
+.navbar-main {
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
 }
 
 .nav-models {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  width: 1280px;
+  gap: 32px;
 }
 
 .nav-models li {
   padding: 16px 0;
+  text-align: center;
 }
 
 .nav-models li a {
@@ -197,7 +229,7 @@ header {
 
 /* Cards */
 .models-cnt {
-  width: 1280px;
+  max-width: 1280px;
   margin: 47px auto;
 }
 
@@ -227,6 +259,24 @@ header {
 .arrowUp {
   color: var(--blue);
   cursor: pointer;
+}
+
+.arrowDown {
+  color: var(--blue);
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.hide-filters {
+  display: none;
+}
+
+.show-filters {
+  display: block;
+}
+
+.show-filters {
+  display: block;
 }
 
 .filters-price {
@@ -271,21 +321,19 @@ select {
 
 .cards {
   display: flex;
-  justify-content: space-between;
   margin-top: 16px;
   gap: 16px;
+  overflow-x: auto;
 }
 
 .cards article {
-  width: 232px;
-  display: flex;
-  flex-direction: column;
+  min-width: 232px;
   padding: 16px;
   border-radius: 4px;
   border: 1px solid var(--grey-200);
 }
 
-.cards article .doorbuster {
+article .doorbuster {
   display: inline-block;
   padding: 8px 16px;
   background-color: var(--bg-red-2);
@@ -327,6 +375,7 @@ select {
 }
 
 .cards article button {
+  width: 100%;
   margin: 8px 0;
   padding: 8px 16px;
   background-color: var(--blue);
@@ -340,17 +389,105 @@ select {
 
 /* Banner */
 .banner-cnt {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
   background-color: var(--bg-red-1);
-  padding: 25px;
+  padding: 25px 16px;
   text-align: center;
   color: var(--white);
 }
 
 /* -- Responsive -- */
-@media (max-width: 1024px) {
-  .navbar-user {
-    border: 1px solid red;
+
+@media only screen and (min-width: 320px) and (max-width: 750px) {
+  .navbar-principal {
+    margin-bottom: 8px;
+  }
+  .navbar-main {
+    padding: 16px;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .nav-models li {
+    padding: 0;
+  }
+  .nav-models li a {
+    font-size: 14px;
+  }
+  .navbar-products {
+    padding: 0 8px;
+  }
+  .navbar-products nav {
+    display: none;
+  }
+  .hide-user {
+    display: none;
+  }
+  .user-menu {
+    display: block;
+    cursor: pointer;
+  }
+  .menu {
+    display: block;
+    cursor: pointer;
+  }
+  .search {
+    width: 300px;
+  }
+  .models-cards {
+    flex-direction: column;
+  }
+  .models-cnt {
+    width: 100vw;
+    margin: 0;
+    padding: 47px 16px;
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1023px) {
+  .navbar-principal {
+    margin-bottom: 8px;
+  }
+  .nav-models li a {
+    font-size: 16px;
+  }
+  .navbar-products {
+    padding: 0 8px;
+  }
+  .navbar-products nav {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  .models-cards {
+    flex-direction: column;
+  }
+  .models-cnt {
+    width: 100vw;
+    margin: 0;
+    padding: 47px 16px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  .navbar_products-anchor {
+    font-size: 12px;
+  }
+  .search {
+    width: 300px;
+  }
+  .nav-categories a {
+    font-size: 12px;
+  }
+  .models-cards {
+    flex-direction: column;
+  }
+  .nav-models li a {
+    font-size: 20px;
+  }
+  .models-cnt {
+    margin: 0;
+    padding: 47px 16px;
   }
 }
