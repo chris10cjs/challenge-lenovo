@@ -40,6 +40,14 @@ a {
 }
 
 /* Navbar users */
+.show-logo {
+  display: block;
+}
+
+.hide-logo {
+  display: none;
+}
+
 .navbar-user {
   justify-content: space-between;
   align-items: center;
@@ -324,6 +332,11 @@ select {
   margin-top: 16px;
   gap: 16px;
   overflow-x: auto;
+  overflow: hidden;
+}
+
+.cards:hover {
+  overflow-x: auto;
 }
 
 .cards article {
@@ -420,6 +433,9 @@ article .doorbuster {
   .navbar-products nav {
     display: none;
   }
+  #navSubProducts {
+    display: none;
+  }
   .hide-user {
     display: none;
   }
@@ -455,6 +471,9 @@ article .doorbuster {
     padding: 0 8px;
   }
   .navbar-products nav {
+    display: none;
+  }
+  #navSubProducts {
     display: none;
   }
   .menu {

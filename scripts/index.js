@@ -18,5 +18,13 @@ function handleOnClickFilters() {
 
 function handleOnActiveUser() {
   let nav = document.getElementById('navUser');
-  nav.className === 'hide-user' ? (nav.className = 'show-user') : (nav.className = 'hide-user');
+  let logo = document.getElementById('logo');
+
+  if (nav.className === 'hide-user') {
+    nav.className = 'show-user';
+    logo.className = 'hide-logo';
+  } else {
+    nav.className = 'hide-user';
+    logo.className = 'show-logo';
+  }
 }
